@@ -1,0 +1,57 @@
+body {
+    background-color: aliceblue;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgb(0, 0, 0, .3);
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    transform-style: preserve-3d; /*Allows elements to behave in a 3D manner*/
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+    transition: 300ms;
+}
+
+.card:hover {
+    --translate-y: -2px;
+    box-shadow: 0 0 5px 2px rgb(0, 0, 0, .5);
+}
+
+.card.flip {
+    --rotate-y: 180deg;
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    padding: 1rem;
+    backface-visibility: hidden;  /*Hides any elements that are rotated backside/flipped (180 degree) */
+}
+
+.card .back {
+    transform: rotateY(180deg); /*Rotate the answers to 180 degree*/
+}
+
+.card .front {
+    left: 0;
+}
+
+.flashcard-options {
+    margin-top: .5rem;
+}
+
+.flashcard-option {
+    margin-top: .25rem;
+    color: #555;
+    font-size: .85rem;
+}
+
+.flashcard-option:first-child {
+    margin-top: 0;
+}
