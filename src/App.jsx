@@ -39,9 +39,9 @@ function App() {
   }
 
   return (
-    <>
+    <div className='container'>
       <FlashCardList flashcards = {flashCards} />
-    </>
+    </div>
   )
 }
 
