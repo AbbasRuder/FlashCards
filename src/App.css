@@ -23,7 +23,6 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 5px 2px rgb(0, 0, 0, .3);
     background-color: white;
-    height: 150px;
     cursor: pointer;
     transform-style: preserve-3d; /*Allows elements to behave in a 3D manner*/
     transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
