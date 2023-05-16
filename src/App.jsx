@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import FormNav from './Components/FormNav'
 import FlashCardList from './Components/FlashCardList'
 import axios from 'axios'
 
@@ -39,9 +40,12 @@ function App() {
   }
 
   return (
-    <div className='container'>
-      <FlashCardList flashcards = {flashCards} />
-    </div>
+    <>
+      <FormNav />
+      <div className='container'>
+        <FlashCardList flashcards = {flashCards} />
+      </div>
+    </>
   )
 }
 
